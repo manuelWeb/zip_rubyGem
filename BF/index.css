@@ -1,0 +1,13 @@
+.centralEvent{position:relative; width:964px; height:465px; margin:0;background: url(bg.jpg) no-repeat;}
+.centralEvent h1{position:absolute;top:12px;left:306px;margin:0;font:bold 52px Arial, Helvetica, sans-serif;color:#0079C4;}
+.centralEvent h2{position:absolute;top:67px;left:348px;margin:0;font:bold 27px/40px Arial, Helvetica, sans-serif;color:#0079C4;text-align:center;}
+.centralEvent h2 span{font-size:40px;color:#005991;}
+.centralEvent .bt-cata{position:absolute;top:0;right:0;height:250px;margin-top:-3px;margin-right:-4px;text-decoration:none;}
+.centralEvent .bt-cata img{-moz-transform: rotate(8deg);-webkit-transform: rotate(8deg);-o-transform:rotate(8deg);-ms-transform:rotate(8deg);transform:rotate(8deg);-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;border:none;}
+.centralEvent .bt-cata:hover img{-moz-transform: rotate(0deg);-webkit-transform: rotate(0deg);-o-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}
+/*.centralEvent .bt-cata span{position:absolute;top:0;left:0;height:216px;width:166px;}*//* background:url(cat_link.png) no-repeat; */
+.centralEvent .bt-cata span span{height:auto;width:auto;left:20px;margin-top:188px;text-align:left;font:normal  14px/20px Arial, Helvetica, sans-serif;color:#7E2119;}
+.centralEvent a.btn{position:absolute;top:170px;left:270px;width:504px;height:86px;text-decoration:none;}
+.centralEvent .btn img{border:none;font-family:Georgia, "Times New Roman", Times, serif;color:#2674AD;font-size:21px;font-weight:bold;font-style:italic; }
+/* js globalLink */
+#globalLink{position:absolute;top:0;left:0;width:964px;height:465px;background:url(evtFirst_bd-diffu.png) no-repeat left bottom;}

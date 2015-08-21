@@ -1,0 +1,25 @@
+== Slim::Template.new('BF/var.slim').render
+doctype strict
+html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"]
+  head
+    meta[http-equiv="Content-Type" content="text/html;charset=UTF-8"]
+    title
+      | BF
+    link[rel="stylesheet" type="text/css" href="index.css" media="all"]
+  body
+    .centralEvent
+      #globalLink
+        h1
+          == $titleH1
+        h2
+          == $titleH2[0]
+          span
+            == $titleH2[1]
+          == $titleH2[2]
+          br
+          == $titleH2[3]
+          span == $titleH2[4]
+
+        a.btn[href==$link_ray]
+    
+    script[type="text/javascript" src="track.js"]
