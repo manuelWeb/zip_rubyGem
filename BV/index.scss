@@ -1,0 +1,71 @@
+@import "compass/css3";
+@import "compass/support";
+// $debug-browser-support: true;
+$ftss: Arial, Helvetica, sans-serif;
+$fts: Georgia, Times, "Times New Roman", serif;
+$primary-color: #922625;
+
+.centralEvent {
+  position: relative; width: 964px; height: 465px;
+  margin: 0;
+  background: url(bg.jpg) no-repeat;
+  h1 {
+    position: absolute; top: 12px; left: 306px;
+    margin: 0;
+    font: bold 42px Arial, Helvetica, sans-serif;
+    letter-spacing: -2.5px;
+    color: #0079C4;
+  }
+  h2 {
+    position: absolute; top: 67px; left: 348px;
+    margin: 0;
+    font: bold 27px/40px Arial, Helvetica, sans-serif;
+    color: #0079C4;
+    text-align: center;
+    span {
+      font-size: 40px; color: #005991;
+    }
+  }
+  .bt-cata {
+    position: absolute; top: 0; right: 0;
+    height: 250px; margin-top: -3px; margin-right: -4px;
+    text-decoration: none;
+
+    img {
+      @include rotate(8deg);
+      @include transition(all 0.5s ease-in-out);
+      border: none;
+    }
+    &:hover img {
+      @include rotate(0deg);
+    }
+
+    span span {
+      height: auto; width: auto;
+      left: 20px;
+      margin-top: 188px;
+      text-align: left;
+      font: normal  14px/20px $ftss;
+      color: #7E2119;
+    }
+  }
+
+  a.js-btn {
+    position: absolute; top: 170px; left: 270px;
+    width: 504px; height: 86px;
+    text-decoration: none;
+  }
+  .js-btn img {
+    border: none;
+    font-family: $fts;
+    font-size: 21px; font-weight: bold; font-style: italic;
+    color: #2674AD;
+  }
+}
+
+/* js globalLink */
+#evtFirst_Link {
+  position: absolute; top: 0; left: 0;
+  width: 964px; height: 465px;
+  background: url(evtFirst_bd-diffu.png) no-repeat left bottom;
+}

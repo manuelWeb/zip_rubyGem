@@ -8,7 +8,7 @@ html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"]
     link[rel="stylesheet" type="text/css" href="index.css" media="all"]
   body
     .centralEvent
-      #globalLink
+      #evtFirst_Link
         h1
           == $titleH1
         h2
@@ -20,6 +20,6 @@ html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"]
           == $titleH2[3]
           span == $titleH2[4]
 
-        a.btn[href==$link_ray]
+        a.js-btn[href==$link_ray onclick==$ga_ray]
     
-    script[type="text/javascript" src="track.js"]
+    script[type="text/javascript" src="js-btn.js"]

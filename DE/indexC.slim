@@ -1,0 +1,28 @@
+== Slim::Template.new('DE/var.slim').render
+doctype strict
+html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"]
+  head
+    meta[http-equiv="Content-Type" content="text/html;charset=UTF-8"]
+    title
+      | DE
+    link[rel="stylesheet" type="text/css" href="index.css" media="all"]
+  body
+    .centralEvent
+      #evtFirst_Link
+        h1
+          == $titleH1
+        h2
+          == $titleH2[0]
+          span
+            == $titleH2[1]
+          == $titleH2[2]
+          br
+          span
+            == $titleH2[3]
+          == $titleH2[4]
+        a.js-btn[href==$link_ray onclick==$ga_ray]
+
+      a#clickme.bt-cata[href==$linkbtcata onclick==$ga target="_blank"]
+        img[src="bt-cata.png" alt=""]
+    
+    script[type="text/javascript" src="js-btn.js"]

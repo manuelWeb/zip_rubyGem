@@ -26,7 +26,15 @@ class Slimed
   end
 end
 bf = Slimed.new("#{pathf[:bf]}/indexC.slim", "#{pathf[:bf]}/indexC.html")
+bv = Slimed.new("#{pathf[:bv]}/indexC.slim", "#{pathf[:bv]}/indexC.html")
+uk = Slimed.new("#{pathf[:uk]}/indexC.slim", "#{pathf[:uk]}/indexC.html")
+de = Slimed.new("#{pathf[:de]}/indexC.slim", "#{pathf[:de]}/indexC.html")
+nl = Slimed.new("#{pathf[:nl]}/indexC.slim", "#{pathf[:nl]}/indexC.html")
 bf.tohtml
+bv.tohtml
+uk.tohtml
+de.tohtml
+nl.tohtml
 
 class ToHtmlProd
   attr_accessor :srcHtml, :srcJs, :path
@@ -51,10 +59,17 @@ class ToHtmlProd
     a = File.read("#{path}/index.html").force_encoding("UTF-8")
     a = HtmlBeautifier.beautify(a, tab_stops: 2)
     # **attention** CODAGE a compléter (GSUB)
-    a = a.gsub(/(<img.*?)>/,'\1 />').gsub('é','&eacute;').gsub('è','&egrave;').gsub('ë','&euml;').gsub('ç','&ccedil;').gsub('à','&agrave;').gsub('ï','&iuml;').gsub('ù','&ugrave;').gsub('â','&acirc;').gsub('ê','&ecirc;').gsub('î','&icirc;').gsub('ô','&ocirc;').gsub('û','&ucirc;').gsub('€','&euro;').gsub('<br>',' <br />')
+    a = a.gsub(/(<img.*?)>/,'\1 />').gsub('<br>',' <br />').gsub('é','&eacute;').gsub('è','&egrave;').gsub('ä','&auml;').gsub('ë','&euml;').gsub('ï','&iuml;').gsub('ö','&ouml;').gsub('ü','&uuml;').gsub('ç','&ccedil;').gsub('à','&agrave;').gsub('è','&egrave;').gsub('ù','&ugrave;').gsub('â','&acirc;').gsub('ê','&ecirc;').gsub('î','&icirc;').gsub('ô','&ocirc;').gsub('û','&ucirc;').gsub('€','&euro;').gsub('’','&rsquo;')
     File.open("#{path}/index.html", "w").puts a
   end
 end
-frprod = ToHtmlProd.new("#{pathf[:bf]}/indexC.html",['[src~="track.js"]'],pathf[:bf])
-frprod.toHtmlFragment
-
+bfprod = ToHtmlProd.new("#{pathf[:bf]}/indexC.html",['[src~="js-btn.js"]'],pathf[:bf])
+bvprod = ToHtmlProd.new("#{pathf[:bv]}/indexC.html",['[src~="js-btn.js"]'],pathf[:bv])
+ukprod = ToHtmlProd.new("#{pathf[:uk]}/indexC.html",['[src~="js-btn.js"]'],pathf[:uk])
+deprod = ToHtmlProd.new("#{pathf[:de]}/indexC.html",['[src~="js-btn.js"]'],pathf[:de])
+nlprod = ToHtmlProd.new("#{pathf[:nl]}/indexC.html",['[src~="js-btn.js"]'],pathf[:nl])
+bfprod.toHtmlFragment
+bvprod.toHtmlFragment
+ukprod.toHtmlFragment
+deprod.toHtmlFragment
+nlprod.toHtmlFragment

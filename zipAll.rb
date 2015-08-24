@@ -26,4 +26,12 @@ class ZipMe
   end
 end
 bfzip = ZipMe.new("TH14bf.zip",pathf[:bf])
+bvzip = ZipMe.new("TH14bv.zip",pathf[:bv])
+dezip = ZipMe.new("TH14de.zip",pathf[:de])
+nlzip = ZipMe.new("TH14nl.zip",pathf[:nl])
+ukzip = ZipMe.new("TH14uk.zip",pathf[:uk])
 bfzip.zipMeNow
+bvzip.zipMeNow
+dezip.zipMeNow
+nlzip.zipMeNow
+ukzip.zipMeNow
